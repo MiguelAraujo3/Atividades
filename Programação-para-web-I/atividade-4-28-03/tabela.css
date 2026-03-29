@@ -1,0 +1,41 @@
+caption {
+  padding: 20px;
+  font-size: 35px;
+  font-weight: bold;
+  background-color: #0f476e;
+}
+table {
+width: 100%;
+border-collapse: collapse;
+border: 1px;
+border: black;
+}
+.wrapper {
+  overflow-x: scroll;
+}
+#inter {
+  background-color: yellow;
+  font-size: 20px;
+  text-align: center;
+}
+thead {
+  text-align: center;
+}
+tbody {
+    border: 1 solid black;
+}
+
+th, td {
+text-align: center;
+justify-content: center;
+padding: 12px;
+border-bottom: 1px solid black;
+}
+.hora {
+  background-color: rgb(255, 187, 0);
+  text-align: center;
+}
+thead th {
+background: #186fad;
+color: white;
+}

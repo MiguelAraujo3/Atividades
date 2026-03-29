@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Horários Acadêmicos</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="wrapper">
+    <table>
+      <caption>Horários Acadêmicos</caption>
+      <thead>
+        <tr>
+          <!--DIAS-->
+          <th scope="col" class="hora">&nbsp;&nbsp;</th>
+          <th scope="col" >Segunda</th>
+          <th scope="col">Terça</th>
+          <th scope="col">Quarta</th>
+          <th scope="col">Quinta</th>
+          <th scope="col">Sexta</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row" class="hora">13:00 - 14:00 </th>
+          <td rowspan="3">Calculo</td>
+          <td rowspan="3">Intro Prog</td>
+          <td rowspan="3">Intro Eng de Software</td>
+          <td rowspan="3">Educação Ambiental</td>
+          <td rowspan="3">Computadores</td>
+        </tr>
+        <tr>
+          <th scope="row" class="hora">14:00 - 15:00</th>
+        </tr>
+        <tr>
+          <th scope="row" class="hora">15:00 - 15:30</th>
+        </tr>
+        <tr>
+          <th scope="row" class="hora"> 15:30 - 16:00</th>
+          <td colspan="5" id="inter"> Intervalo </td>
+        </tr>
+        <tr>
+          <th scope="row" class="hora">16:00 - 17:00 </th>
+          <td rowspan="2">Intro Prog</td>
+          <td rowspan="2">Educação Ambiental</td>
+          <td rowspan="2">Calculo</td>
+          <td rowspan="2">Computadores</td>
+          <td rowspan="2">Intro Eng de Software</td>
+        </tr>
+        <tr>
+          <th scope="row" class="hora">17:00 - 18:00</th>
+        </tr>
+      </tbody>
+      <tfoot>
+        <th>Carga Horária Semanal</th>
+        <td colspan="5"> 22 horas e 30 minutos por Semana</td>
+      </tfoot>
+    </table>
+  </div>
+</body>
+</html>

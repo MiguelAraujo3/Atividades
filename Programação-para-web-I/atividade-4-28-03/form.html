@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulário de Inscrição</title>
+</head>
+<body>
+    <form action="/cadastro" method="post">
+      <p>
+        <label for="inome">Nome</label>
+        <input type="text" name="nome" id="inome" required placeholder="Nome">
+      </p>
+      <p>
+        <label for="iemail">Email</label>
+        <input type="email" name="email" id="iemail" required placeholder="Email@gmail.com">
+      </p>
+      <p>
+        <label for="itel">Telefone com máscara</label>
+        <input type="tel" name="tel" id="itel" pattern="[(0-9)]{2} [0-9]{5}-[0-9]{4}" placeholder="(00) 99999-9999">
+      </p>
+      <p>
+        <label for="idata">Data de nascimento</label>
+        <input type="date" name="date" id="idate">
+      </p>
+      <p>
+        <label for="iingre">Tipo de Ingresso</label>
+        <select name="ingre" id="iingre" placeholder="Escolher">
+          <option value="none"></option>
+          <option value="vip">VIP</option>
+          <option value="regular">Regular</option>
+          <option value="estudante">Estudante</option>
+          </option>
+        </select>
+      </p>
+      <p>
+        <label for="iquant">Quantidade de Ingressos</label>
+        <input type="number" name="quant" id="iquant" minlength="1" maxlength="5">
+      </p>
+      <fieldset>
+        <legend>Categoria de Interesse:</legend>
+        <p>
+          <label for="icateg">
+            <p>
+          <input type="checkbox" name="categ" id="icateg" value="comedia">
+          Comédia
+          </p>
+          <input type="checkbox" name="categ" id="icateg" value="romance">
+          Romance
+          </p>
+          <input type="checkbox" name="categ" id="icateg" value="acao">
+          Ação
+          </p><input type="checkbox" name="categ" id="icateg" value="aventura">
+          Aventura
+          </p>
+          <input type="checkbox" name="categ" id="icateg" value="infantil">
+          Infantil
+          </p>
+          </label>
+      </fieldset>
+      </p>
+      <p>
+        <label for="icoment">Comentários Adicionais</label>
+        <p><textarea name="coment" id="icoment" rows="4" cols="40"></textarea></p>
+      </p>
+      <p>
+      <input type="submit" value="Enviar">
+      <input type="reset" value="Limpar">
+    </p>
+    </form>
+</body>
+</html>
