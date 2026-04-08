@@ -1,0 +1,18 @@
+h1 {
+  color: rgb(30, 255, 0);
+  display: flex;
+  justify-content: center;
+  margin: 100px;
+}
+.oi {
+  margin: 200px;
+  background-color: gray;
+  color: red;
+  display: grid;
+  align-items: auto;
+  justify-content: center;
+}
+.oi:hover{
+  font-size: 150px;
+  font-weight: bold;
+}
