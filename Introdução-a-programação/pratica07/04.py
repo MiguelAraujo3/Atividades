@@ -1,3 +1,5 @@
+#Esse programa ler um conjunto não determinado de pares de valores M e N (parar quando algum dos valores for menor ou igual a zero). Para cada par lido, mostra a
+#sequência do menor até o maior e a soma dos inteiros consecutivos entre eles (incluindo o N e M).
 m = 1
 n = 1
 menor = 0
