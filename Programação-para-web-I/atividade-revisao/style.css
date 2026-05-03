@@ -1,0 +1,16 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+nav {
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #166534;
+  width: 100%;
+  margin: 0px;
+}
+ul {
+  display:inline-block;
+  text-decoration: none;  
+}
