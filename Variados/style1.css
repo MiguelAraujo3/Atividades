@@ -1,0 +1,258 @@
+/* Variáveis de Cores Específicas do Projeto */
+:root {
+    --verde-escuro: #166534;
+    --verde-medio: #047857;
+    --cinza-claro: #F3F4F6;
+    --branco: #FFFFFF;
+    --texto-escuro: #333333;
+}
+
+/* Reset Básico e Fontes Gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #333333;
+    background-color: #fff;
+    line-height: 1.6;
+}
+
+/* Container para centralizar o conteúdo com max-width */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* 1. Barra de Navegação */
+.navbar {
+    background-color: #166534;
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #A7F3D0; /* Efeito hover nos links */
+    text-decoration: underline;
+}
+
+/* 2. Banner Principal */
+.banner {
+    background: linear-gradient(135deg, #166534, var(--verde-medio));
+    color: #fff;
+    min-height: 350px; /* Altura mínima exigida superior a 300px */
+    display: flex;
+    align-items: center;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.banner-content h1 {
+    font-size: 38px;
+    margin-bottom: 20px;
+}
+
+.banner-content p {
+    font-size: 18px;
+    max-width: 800px;
+    margin: 0 auto 30px auto;
+}
+
+.banner-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 28px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.btn:hover {
+    transform: translateY(-3px); /* Efeito Hover */
+}
+
+.btn-primary {
+    background-color: var(--verde-medio);
+    color: #fff;
+    border: 2px solid var(--verde-medio);
+}
+
+.btn-primary:hover {
+    background-color: #03543D;
+    border-color: #03543D;
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--branco);
+    border: 2px solid var(--branco);
+}
+
+.btn-secondary:hover {
+    background-color: var(--branco);
+    color: var(#166534);
+}
+
+/* 3. Seção de Cursos */
+.cursos-section {
+    padding: 70px 0;
+    background-color: var(--cinza-claro); /* Fundo alternado */
+    text-align: center;
+}
+
+.cursos-section h2, .dados-section h2, .contato-section h2 {
+    color: #166534;
+    font-size: 32px;
+    margin-bottom: 50px;
+}
+
+.cursos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+}
+
+.curso-card {
+    background-color: var(--branco);
+    padding: 30px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra exigida */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.curso-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); /* Efeito hover nos cards */
+}
+
+.curso-card h3 {
+    color: #166534;
+    margin-bottom: 15px;
+    font-size: 22px;
+}
+
+/* 4. Tabela de Dados */
+.dados-section {
+    padding: 70px 0;
+    text-align: center;
+}
+
+.dados-table {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+
+.dados-table th, .dados-table td {
+    border: 1px solid #CCCCCC; /* Bordas entre células */
+    padding: 16px;
+    text-align: center;
+}
+
+.dados-table th {
+    background-color: #166534; /* Cabeçalho com fundo diferente */
+    color: var(--branco);
+    font-size: 18px;
+}
+
+.dados-table tbody tr:nth-child(even) {
+    background-color: var(--cinza-claro);
+}
+
+/* 5. Formulário de Contato */
+.contato-section {
+    padding: 70px 0;
+    background-color: var(--cinza-claro); /* Fundo alternado */
+    text-align: center;
+}
+
+.contato-form {
+    max-width: 600px; /* Largura máxima entre 500px e 600px exigida */
+    margin: 0 auto;
+    background-color: var(--branco);
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #166534;
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #BBBBBB;
+    border-radius: 4px;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+}
+
+.form-group input:focus, .form-group textarea:focus {
+    outline: none;
+    border-color: var(--verde-medio);
+    box-shadow: 0 0 5px rgba(4, 120, 87, 0.3);
+}
+
+.btn-submit {
+    background-color: var(--verde-medio);
+    color: var(--branco);
+    border: none;
+    width: 100%;
+    padding: 15px;
+    font-size: 18px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn-submit:hover {
+    background-color: #166534;
+}
