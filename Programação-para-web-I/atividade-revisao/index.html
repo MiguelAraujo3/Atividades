@@ -7,16 +7,97 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <div>
     <nav>
       <h1>IFPB</h1>
       <li>
-        <ul>Início</ul>
-        <ul>Cursos</ul>
-        <ul>Dados</ul>
-        <ul>Contato</ul>    
+        <ul><a href="#inicio">Início</a></ul>
+        <ul><a href="#cursos">Cursos</a></ul>
+        <ul><a href="#dados">Dados</a></ul>
+        <ul><a href="#contato">Contato</a></ul>    
       </li>
     </nav>
-    </div>
+    <main>    
+      <section id="inicio"> 
+        <div>
+          <h2>Transformando ideias em soluções digitais</h2>
+          <p>A Unidade Acadêmica de Informática do IFPB forma profissionais qualificados em tecnologia, preparando-os para os desafios do mercado digital através de ensino de qualidade e projetos inovadores.</p>
+          <div id="botoes">
+            <a id="btn1" href="#cursos">Conheça nossos cursos</a>
+            <a id="btn2" href="#contato">Entre em Contato</a>
+          </div>
+        </div>
+      </section>
+      <section id="cursos">
+        <h2 class="title">Nossos Cursos</h2>
+        <div class="cursos-pai">
+          <div class="cursos"> 
+            <h3>Técnico em Informática</h3>
+            <p>Formação técnica integrada ao ensino médio com foco em desenvolvimento e manutenção de sistemas.</p>
+          </div>
+          <div class="cursos">
+            <h3>Técnico em Informática</h3>
+            <p>Formação técnica integrada ao ensino médio com foco em desenvolvimento e manutenção de sistemas.</p>
+          </div>
+          <div class="cursos"> 
+            <h3>Técnico em Informática</h3>
+            <p>Formação técnica integrada ao ensino médio com foco em desenvolvimento e manutenção de sistemas.</p>
+          </div>
+          <div class="cursos"> 
+            <h3>Técnico em Informática</h3>
+            <p>Formação técnica integrada ao ensino médio com foco em desenvolvimento e manutenção de sistemas.</p>
+          </div>
+        </div>
+      </section>
+      <section id="dados">
+        <h2 class="title">Nossos Números</h2>
+        <div>
+          <table>
+            <thead>
+              <tr>
+                <th>Métrica</th>
+                <th class="valor">Valor</th>
+                <th class="meta">Meta 2025</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="coluna-prin2" >Alunos Matriculados</td>
+                <td class="linha">1.850</td>
+                <td class="linha">2.000</td>
+              </tr>
+              <tr>
+                <td class="coluna-prin">Taxa de Aprovação</td>
+                <td>87%</td>
+                <td>90%</td>
+              </tr>
+              <tr>
+                <td class="coluna-prin2">Projetos de Pesquita</td>
+                <td class="linha">45</td>
+                <td class="linha">50</td>
+              </tr>
+              <tr>
+                <td class="coluna-prin">Professores Doutores</td>
+                <td>35</td>
+                <td>40</td>
+               </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+      <section id="contato">
+        <h2 class="title">Entre em contato</h2>
+        <div class="contato">
+        <form>
+          <label for="nomeid">Nome:</label>
+          <input type="text" name="nome" id="nomeid" required>
+          <label for="emailid">Email:</label>
+          <input type="email" name="email" id="emailid" required>
+          <label for="mensagemid">Mensagem:</label>
+          <textarea id="mensagemid" name="mensagem" rows="5" required></textarea>
+          <button type="submit">Enviar</button>
+        </form>
+        </div>
+      </section>
+    </main>
   </body>
 </html>
