@@ -3,11 +3,14 @@
   grid-template-columns: repeat(4, 1fr);
   text-align: center;
   justify-content: center;
+  height: auto;
+  border: solid 1px black;
 }
 .grid {
   padding: 10px;
   border: solid black 1px;
   margin: 1px;
+  height: 20px;
 }
 .title {
   justify-content: center;
@@ -20,7 +23,8 @@
   padding: 10px;
 }
 .grid:hover {
-  font-size: 15px;
+  height: 30px;
+  font-size: 25px;
   padding: 10px 25px;
   border: solid rgb(255, 0, 0) 1px;
   margin: 1px;
