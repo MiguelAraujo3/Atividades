@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TechStore</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav>
+    
+      <h2><span>Tech</span><span class="logo">Store</span></h2>
+      <li>
+        <ul><a href="#inicio">Início</a></ul>
+        <ul><a href="#produtos">Produtos</a></ul>
+        <ul><a href="#ofertas">Ofertas</a></ul>
+        <ul><a href="#sobre">Sobre</a></ul>
+        <ul><a href="#contato">Contato</a></ul>
+      </li>
+      <a id="login" href="#login">Entrar</a>
+  </nav>
+  <section class="hero">
+    <div class="hero-text">
+      <h2>Os melhores produtos tech com os melhores preços</h2>
+      <p>Smartphones, notebooks, acessórios e muito mais.
+      Frete grátis acima de R$&nbsp;299</p>
+      <div class="hero-actions">
+      <a href="#" class="btn-primary">Ver Ofertas </a>
+      <a href=#; class="btn-secondary">Saiba Mais</a>
+      </div>
+    </div>
+      <div class="hero-image">
+        <img src="#" alt="Produto em destaque">
+      </div>
+  </section>
+  <section class="vitrine">
+    <h2>Produtos em Destaque</h2>
+    <div class="produtos-grid">
+      <div class="produtos-card destaque">
+        <img src="#" alt="Notebook Gamer">
+        <div class="card-info">
+          <span class="badge">Oferta</span>
+          <h3>Notebook Gamer Pro</h3>
+          <p class="preco"> R$ 4.299,00</p>
+          <a href="#" class="btn-comprar">Comprar</a>
+        </div>
+      </div>
+      <div class="produtos-card">
+        <img src="#" alt="Smartphone Ultra X">
+        <div class="card-info">
+          <span class="badge">Novo</span>
+          <h3>Smartphone Ultra X</h3>
+          <p class="preco"> R$ 2.199,00</p>
+          <a href="#" class="btn-comprar">Comprar</a>
+        </div>
+      </div>
+      <div class="produtos-card">
+        <img src="#" alt="Fone Bluetooth ANC">
+        <div class="card-info">
+          <span class="badge"></span>
+          <h3>Fone Bluetooth</h3>
+          <p class="preco"> R$ 349,00</p>
+          <a href="#" class="btn-comprar">Comprar</a>
+        </div>
+      </div>
+      <div class="produtos-card">
+        <img src="#" alt="Teclado Mecânico RGB">
+        <div class="card-info">
+          <span class="badge"></span>
+          <h3>Teclado Mecânico RGB</h3>
+          <p class="preco"> R$ 289,00</p>
+          <a href="#" class="btn-comprar">Comprar</a>
+        </div>
+      </div>
+      <div class="produtos-card">
+        <img src="#" alt="Monitor 4K 27&quot;">
+        <div class="card-info">
+          <span class="badge">Oferta</span>
+          <h3>Monitor 4K 27&quot;</h3>
+          <p class="preco"> R$ 1,899,00</p>
+          <a href="#" class="btn-comprar">Comprar</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="specs">
+    <h2>Especificações do Notebook Gamer Pro</h2>
+    <div class="table-wrapper">
+    <table>
+      <thead>
+        <tr>
+          <th>Componente</th>
+          <th>Especificação</th>
+          <th>Destaque</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Processador</td>
+          <td>Intel Core i9-13900HX, 24 núcleos</td>
+          <td class="destaque2">Alto desempenho</td>
+        </tr>
+        <tr>
+          <td class="diferente">Memória RAM</td>
+          <td class="diferente">32 GB DDR5 4800 MHz</td>
+          <td class="diferente destaque2">Multitarefa fluida</td>
+        </tr>
+        <tr>
+          <td>Armazenamento</td>
+          <td>SSD NVMe 1 TB PCIe 4.0</td>
+          <td class="destaque2">Leitura de 7.000 MB/s</td>
+        </tr>
+        <tr>
+          <td class="diferente">Placa de vídeo</td>
+          <td class="diferente">NVIDIA RTX 4070 8 GB</td>
+          <td class="diferente destaque2">Ray Tracing em tempo real</td>
+        </tr>
+        <tr>
+          <td>Tela</td>
+          <td>16&quot; QHD+ 240 Hz IPS</td>
+          <td  class="destaque2">Sem motion blur</td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+  </section>
+  <section class="newsletter">
+    <div class="newsletter-box">
+      <h2>Receba nossas ofertas</h2>
+      <p>Cadastre-se e receba as melhores promoções diretamente no seu e-mail.</p>
+      <form>
+        <div class="form-group">
+          <label for="nome">Nome Completo</label>
+          <input type="text" id="nome"name="nome" placeholder="Seu nome Completo">
+        </div>
+        <div class="form-group">  
+          <label for="email">Email</label>
+          <input type="email" name="email" id="email" placeholder="seu@email.com">
+        </div>
+        <div class="form-group">
+          <label for="interesse">Categoria de Interesse</label>
+          <select name="interesse" id="interesse">
+            <option value="">Selecione...</option>
+            <option value="notebooks">Notebooks</option>
+            <option value="smartphones">Smartphones</option>
+            <option value="acessorios">Acessórios</option>
+            <option value="monitores">Monitores</option>
+          </select>
+        </div>
+        <button type="submit">Quero receber ofertas</button>
+      </form>
+    </div>
+  </section>
+</body>
+</html>
