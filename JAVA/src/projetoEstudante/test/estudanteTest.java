@@ -3,7 +3,7 @@ import java.util.Arrays;
 import java.util.Scanner;
 import projetoEstudante.dominio.Aluno;
 
-public class estudanteTest {
+public class  estudanteTest {
     public static void main(String[] args) {
         //Cabeçalho
         System.out.println();
@@ -13,7 +13,6 @@ public class estudanteTest {
         System.out.println();
         //Receber do usuário q quantidade de alunos, a nota de corte e a quantidade de aulas
         Scanner leia = new Scanner(System.in);
-        Aluno metodo = new Aluno();
         System.out.print("Digite a quantidade de alunos da turma: ");
         int quant = leia.nextInt();
         System.out.print("Digite qual a nota de corte para Aprovação: ");
@@ -21,9 +20,9 @@ public class estudanteTest {
         System.out.print("Digite a quantidade de aulas que terão no período: ");
         double quantAulas = leia.nextInt();
         leia.nextLine();
+        Aluno metodo = new Aluno(notaCorte, quantAulas);
         //variáveis
         int choose;
-        double taxaAprov;
         double[] falta = new double[quant];
         double maiorNota = -1;
         double menorNota = 11;
@@ -32,7 +31,6 @@ public class estudanteTest {
         double soma = 0;
         int notaMaiorQuant = 0;
         String[] alunosMaiorNota = new String[quant];
-        //mostrarNome = metodo.mostrarNome(nome);
         //Receber do Usuário os nomes e notas dos alunos
         for (int i = 0; i < quant; i++) {
             System.out.print("Digite o nome do aluno: ");
@@ -80,7 +78,7 @@ public class estudanteTest {
             } else if (choose == 2) {
                 for (int i = 0; i < quant; i++) {
                     System.out.print("| Aluno: " + nome[i]);
-                    System.out.printf(" | Situação: %s", metodo.situacao(nota[i], notaCorte));
+                    System.out.printf(" | Situação: %s", metodo.situacao(nota[i]));
                     System.out.println();
                 }
             } else if (choose == 3) {
@@ -94,7 +92,7 @@ public class estudanteTest {
             } else if (choose == 4) {
                 for (int i = 0; i < quant; i++) {
                     System.out.print("| Aluno: " + nome[i]);
-                    System.out.printf(" | Frequência: %.2f%%", metodo.frequencia(quantAulas, falta[i]));
+                    System.out.printf(" | Frequência: %.2f%%", metodo.frequencia(falta[i]));
                     System.out.println();
                 }
             } else if (choose == 5){
@@ -106,8 +104,8 @@ public class estudanteTest {
                 System.out.println("==========VISÃO GERAL==========");
                 for (int i = 0; i < quant; i++) {
                     System.out.print("| Aluno: " + nome[i] + " | Nota: " + nota[i]);
-                    System.out.printf(" | Situação: %s", metodo.situacao(nota[i], notaCorte));
-                    System.out.printf(" | Frequência: %.2f%%", metodo.frequencia(quantAulas, falta[i]));
+                    System.out.printf(" | Situação: %s", metodo.situacao(nota[i]));
+                    System.out.printf(" | Frequência: %.2f%%", metodo.frequencia(falta[i]));
                     System.out.print(metodo.situacaoNota(nota[i], maiorNota, menorNota));
                     System.out.println();
                 }

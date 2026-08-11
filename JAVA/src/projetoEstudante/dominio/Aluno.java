@@ -1,6 +1,17 @@
 package projetoEstudante.dominio;
 
-public class Aluno {
+public class
+Aluno {
+    private String situacaoAluno;
+    private double notaCorte;
+    private double quantAulas;
+    {
+        situacaoAluno = "Não Avaliado";
+    }
+    public Aluno(double notaCorte, double quantAulas) {
+        this.notaCorte = notaCorte;
+        this.quantAulas = quantAulas;
+    }
     public double media(double soma, int quant) {
         soma /= quant;
         return soma;
@@ -13,16 +24,18 @@ public class Aluno {
                 System.out.print("");
             } else {
                 System.out.print(name + "; ");
-            }
+            }   
         }
         System.out.print("");
     }
 
-    public String situacao(double nota, double notaCorte) {
+    public String situacao(double nota) {
         if (nota >= notaCorte) {
-            return "Aprovado";
+            situacaoAluno = "Aprovado";
+            return situacaoAluno;
         } else {
-            return "Reprovado";
+            situacaoAluno = "Reprovado";
+            return situacaoAluno;
         }
     }
 
@@ -36,9 +49,9 @@ public class Aluno {
         }
     }
 
-    public double frequencia(double aulas, double faltas) {
-        double result = (aulas-faltas)/aulas *100;
-        if (aulas >= faltas) {
+    public double frequencia(double faltas) {
+        double result = (quantAulas-faltas)/quantAulas *100;
+        if (quantAulas >= faltas) {
             return result;
         } else {
             System.out.println("ERRO, A QUANTIDADE DE FALTAS É MAIOR QUE AS AULAS");
