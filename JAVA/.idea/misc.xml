@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+<<<<<<< HEAD
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_21_PREVIEW" project-jdk-name="graalvm-jdk-21" project-jdk-type="JavaSDK">
+=======
   <component name="ProjectRootManager" version="2" languageLevel="JDK_21_PREVIEW" project-jdk-name="21" project-jdk-type="JavaSDK">
+>>>>>>> d4727809950c76f7c1b67d2064ad4d269f944bf3
     <output url="file://$PROJECT_DIR$/out" />
   </component>
 </project>
