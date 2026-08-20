@@ -15,15 +15,23 @@ class Conta:
             self.saldo += valor
             return self.saldo
         else: 
-            return "Valor Inválido"
+            print("Valor Inválido")
     def sacar(self, valor):
-        if valor < self.saldo or valor > 0:
+        if valor <= self.saldo and valor > 0:
             self.saldo -= valor
             return True
+        elif valor > self.saldo:
+            print("Valor inválido")
         else:
             print ("Valor Inválido")
-            return False
-
+#Teste de leitura de contas
+contas = []
+for i in range(3):
+    numero = int(input("Número da conta: "))
+    saldo = int(input("Saldo da conta: "))
+    nome_titular = input("Titular da conta: ")
+    contas.append(Conta(numero, saldo, nome_titular))
+'''
 c1 = Conta(None, None, None);
 c2 = Conta(None, None, None);
 c3 = Conta(None, None, None);
@@ -35,7 +43,7 @@ for conta in contas:
     conta.numero = int(input("Número da conta: "))
     conta.saldo = int(input("Saldo da conta: "))
     conta.nome_titular = input("Titular da conta: ")
-
+'''                    
 while(True):
     choose = input(f'[1] DEPOSITAR \n[2] SACAR \n[3]SALDO \n[0]SAIR\n')
     if choose == '1':

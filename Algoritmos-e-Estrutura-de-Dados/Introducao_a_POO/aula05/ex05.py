@@ -39,18 +39,24 @@ class Conta:
     def depositar(self, valor):
         if valor > 0:
             self.saldo += valor
-            return True
+            return self.saldo
         else: 
             print("Valor Inválido")
-            return False
     def sacar(self, valor):
-        if valor < self.saldo or valor > 0:
+        if valor <= self.saldo and valor > 0:
             self.saldo -= valor
             return True
+        elif valor > self.saldo:
+            print("Valor inválido")
         else:
             print ("Valor Inválido")
-            return False
-
+contas = []
+for i in range(3):
+    numero = int(input("Número da conta: "))
+    saldo = int(input("Saldo da conta: "))
+    nome_titular = input("Titular da conta: ")
+    contas.append(Conta(numero, saldo, nome_titular))            
+'''
 c1 = Conta(None, None, None);
 c2 = Conta(None, None, None);
 c3 = Conta(None, None, None);
@@ -63,9 +69,10 @@ for conta in contas:
     conta.numero = int(input("Número da conta: "))
     conta.saldo = int(input("Saldo da conta: "))
     conta.nome_titular = input("Titular da conta: ")
-
+'''
+banco = Banco(contas)
 while(True):
-    choose = input(f'[1] DEPOSITAR \n[2] SACAR \n[3]SALDO \n[4]TRANSFERIR \n[5]ADICIONAR CONTA \n[6]REMOVER CONTA \n[0]SAIR\n')
+    choose = input(f'[1] DEPOSITAR \n[2] SACAR \n[3]SALDO \n[4]TRANSFERIR \n[5]ADICIONAR CONTA \n[6]REMOVER CONTA \n[7]CRIAR CONTA \n[0]SAIR\n')
     if choose == '0':
         break;
     elif choose == '1':
@@ -132,15 +139,20 @@ while(True):
                 conta_encontrada = conta
                 break
         contas.append(conta_encontrada)
-        conta
+        
     elif choose == '6':
         numero_conta = int(input("Escolha o número da conta que deseja adicionar ao banco"))
         conta_encontrada = None
         for conta in contas:
             if conta.numero == numero:
                 conta_encontrada = conta
+                contas.pop(conta_encontrada)
                 break
-        if conta_encontrada in contas:
-            contas.pop(conta_encontrada)
-        else:
-            print(f'A conta de número {conta_encontrada.numero} não está no banco')
+            else:
+                print(f'A conta de número {conta_encontrada.numero} não está no banco')
+    elif choose == '7':
+        for i in range(1):
+            numero = int(input("Número da conta: "))
+            saldo = int(input("Saldo da conta: "))
+            nome_titular = input("Titular da conta: ")
+            contas.append(Conta(numero, saldo, nome_titular))
