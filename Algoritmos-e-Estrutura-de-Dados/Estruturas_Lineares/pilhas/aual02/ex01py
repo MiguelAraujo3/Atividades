@@ -1,0 +1,70 @@
+class Lista:    
+    def __init__ (self, max):
+        self.__dados = [None] * max
+        self.__tamanho = 0 
+    
+    def buscar (self, dado):
+        for i in range (self.__tamanho):
+            if self.__dados[i] == dado:
+                return i
+        return None
+    
+    def cheia(self):
+        return self.__tamanho == len(self.__dados)
+    
+    def inserir_final(self, dado):
+        if self.__tamanho == len(self.__dados):
+            return False
+        self.__dados[self.__tamanho] = dado
+        self.__tamanho += 1
+        return True
+    
+    def inserir (self, dado, posicao):
+        if self.__tamanh == len(self.__dados):
+            return False
+        if posicao < 0:
+            posicao = 0
+        if posicao > self.__tamanho:
+            posicao = self.__tamanho
+        for i in range(self.__taamanho,posicao, -1):
+            self.__dados[i] = self.__dados[-1]
+        self.__dados[posicao] = dado
+        self.__tamanho += 1
+        return True
+    
+    def remover_posicao (self, posicao):
+        if posicao < 0 or posicao > self.__tamanho -1:
+            return None
+        dado = self.__dados[posicao]
+        for i in range(posicao, self.__tamanho-1):
+            self.__dados[i] = self.__dados[i+1]
+        self.__dados[self.__tamanho-1] = None
+        self.__tamanho -= 1
+        return dado
+    
+    def remover_dado (self, dado):
+        posicao = self.buscar(dado)
+        if posicao :
+            self.remover_posicao(posicao)
+        return posicao
+    def remover_dado2(self, dado):
+        if dado in self.__dados:
+            for dado in self.__dados:
+                if dado == self.dados(dado):
+                    posicao = self.__dados(dado)
+                    return posicao
+        else:
+            return None
+        
+    def __str__(self):
+        return str(self.__dados)
+
+lista = Lista(5)
+lista.inserir_final('A')
+lista.inserir_final('B')
+lista.inserir_final('C')
+lista.inserir_final('D')
+lista.inserir_final('E')
+print(lista)
+lista.remover_dado('C')
+print(lista)
