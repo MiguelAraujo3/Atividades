@@ -1,3 +1,4 @@
+#lista sequencial
 class Lista:    
     def __init__ (self, max):
         self.__dados = [None] * max
