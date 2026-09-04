@@ -47,7 +47,7 @@ class Lista:
         for i in range(posicao):
             atual = atual.proximo
         return atual.dado
-    def remover_posicao(self, posicao):
+    def remover_indice(self, posicao):
         if posicao < 0 or posicao >= self.__tamanho:
             raise IndexError("Posição Inválida");
         if self.vazia():
@@ -60,7 +60,18 @@ class Lista:
             atual = atual.proximo
         atual.dado = None
         return
+    def inserir_final(self, dado):
+        novo = _No(dado)
+        atual = self.__inicio
+        tamanho = self.__tamanho
+        self.__tamanho += 1
+        while tamanho != 1:
+            atual = atual.proximo
+            tamanho -= 1
+        atual.proximo = novo
 
+        return
+    
 lista = Lista()
 
 lista.inserir(0,5)
@@ -68,13 +79,22 @@ lista.inserir(1,10)
 lista.inserir(1,15)
 lista.inserir(2,8)
 lista.imprimir()
+print("--------------")
 print(lista.buscar(2))
 print(lista.buscar(1))
 print(lista.buscar(3))
 print("--------------")
 lista.imprimir()
-lista.remover_posicao(4)
+lista.remover_indice(3)
 lista.imprimir()
-
+print("--------------")
+lista.imprimir()
+lista.inserir_final(5)
+lista.imprimir()
+lista.inserir_final(6)
+lista.imprimir()
+lista.inserir_final(251234)
+lista.imprimir()
+print("--------------")
 
 print(lista.tamanho())
