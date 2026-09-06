@@ -32,7 +32,10 @@ class Pilha:
             return None
         self.__topo = self.__topo.proximo;
         self.__tamanho -= 1;
-    
+    def ultimo(self):
+        while self.__topo.proximo != None:
+            self.__topo = self.__topo.proximo
+        return self.ultimo
     def esvaziar(self):
         if self.vazia():
             return None
@@ -51,11 +54,12 @@ class Pilha:
             teste = teste.proximo
             tamanho -= 1
         print()
-         
-pilha = Pilha()
-pilha.empilhar("a")
-pilha.empilhar("b")
-pilha.empilhar("c")
-pilha.imprimir()
-pilha.desimpilhar()
-pilha.imprimir()
+
+    def desimpilhar(self):
+        if self.vazia():
+            return None
+        self.__topo = self.__topo.proximo;
+        self.__tamanho -= 1;
+    
+    def inverter(self):
+        tamanho = self.__tamanho

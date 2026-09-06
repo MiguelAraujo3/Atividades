@@ -51,11 +51,27 @@ class Pilha:
             teste = teste.proximo
             tamanho -= 1
         print()
-         
+
 pilha = Pilha()
-pilha.empilhar("a")
-pilha.empilhar("b")
-pilha.empilhar("c")
-pilha.imprimir()
-pilha.desimpilhar()
-pilha.imprimir()
+choose = -1
+while choose != 0:
+    choose = int(input("Digite sua opção: "))
+    
+    if choose == 1:
+        pilha.imprimir()
+    elif choose == 2:
+        numero = input("Digite o que vai ser empilhado: ")
+        pilha.empilhar(numero)
+
+    elif choose == 3:
+        pilha.desimpilhar()
+    elif choose == 4:
+        pilha.esvaziar()
+    elif choose == 5:
+        pilha.topo()
+    elif choose == 6:
+        pilha.tamanho()
+    elif choose == 0:
+        break
+    else:
+        print("Escolha Inválida")
