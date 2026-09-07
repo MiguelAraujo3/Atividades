@@ -7,6 +7,8 @@ class Pilha:
     def __init__(self):
         self.__topo = None;
         self.__tamanho = 0;
+        self.__abertos = 0;
+        self.__fechados = 0;
     def vazia(self):
         return self.__topo == None
 
@@ -20,6 +22,10 @@ class Pilha:
     
     def empilhar(self, dado):
         novo = _No(dado);
+        if novo.dado == "(":
+            self.__abertos += 1
+        if novo.dado == ")":
+            self.__fechados += 1
         self.__tamanho += 1;
         novo.proximo = self.__topo
         self.__topo = novo
@@ -55,19 +61,17 @@ class Pilha:
         self.__topo = self.__topo.proximo;
         self.__tamanho -= 1;
 
-pilha  = Pilha()
-palavra = "TARARAT"
-for letra in palavra:
-    pilha.empilhar(letra)
-resultado = False
-for i in range(pilha.tamanho()):
-    if palavra[i] == pilha.topo():
-        resultado = True
-        pilha.desimpilhar()
-    else:
-        resultado = False
-        break
-if resultado:
-    print(f"A palavra {palavra} é um palíndromo")
-else: 
-    print(f"A palavra {palavra} não é um palíndromo")
+    def verificar(self):
+        if self.__abertos == self.__fechados:
+            return True
+        return False
+
+pilha = Pilha()
+frase = "(A + B) * C)"
+for letra in frase:
+    if letra == "(" or letra == ")":
+        pilha.empilhar(letra)
+if pilha.verificar():
+    print(f'{frase} -> correta')
+else:
+    print(f'{frase} -> incorreta')

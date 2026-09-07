@@ -1,17 +1,21 @@
-#pilha encadeada
+#bora
 class _No:
     def __init__(self, dado):
         self.dado = dado;
         self.proximo = None;
+
 class Pilha:
     def __init__(self):
         self.__topo = None;
         self.__tamanho = 0;
+    
     def vazia(self):
         return self.__topo == None
 
+
     def tamanho(self):
         return self.__tamanho;
+
 
     def topo(self):
         if self.vazia():
@@ -44,30 +48,21 @@ class Pilha:
         tamanho = self.__tamanho
         teste = self.__topo
         while tamanho != 0:
-            print(teste.dado, end = ', ')
+            print(teste.dado, end = '')
             teste = teste.proximo
             tamanho -= 1
         print()
 
-    def desimpilhar(self):
-        if self.vazia():
-            return None
-        self.__topo = self.__topo.proximo;
-        self.__tamanho -= 1;
+pilha = Pilha()
 
-pilha  = Pilha()
-palavra = "TARARAT"
-for letra in palavra:
-    pilha.empilhar(letra)
-resultado = False
-for i in range(pilha.tamanho()):
-    if palavra[i] == pilha.topo():
-        resultado = True
-        pilha.desimpilhar()
-    else:
-        resultado = False
-        break
-if resultado:
-    print(f"A palavra {palavra} é um palíndromo")
-else: 
-    print(f"A palavra {palavra} não é um palíndromo")
+numero_fixo = 13
+numero_usado = numero_fixo
+resto = 1321312312312313123123123123123123123123123
+while numero_usado > 0:
+    resto = numero_usado % 2
+    numero_usado = numero_usado // 2
+    pilha.empilhar(resto)
+
+print(f'{numero_fixo} = ', end='')
+pilha.imprimir()
+print(pilha.tamanho())
