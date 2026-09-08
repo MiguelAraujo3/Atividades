@@ -21,7 +21,19 @@ class Lista:
                 print(atual.dado, end=', ')
             atual = atual.proximo
         print()
-
+    def posicao(self, dado):
+    # retorna o índice (posição) de um valor (1ª ocorrência)
+        if self.vazia():
+            return False
+        indice = 0
+        atual = self.__inicio
+        while atual.dado != dado and atual.proximo != None:
+            indice += 1
+            atual = atual.proximo
+        if atual.dado == dado:
+            return indice
+        return None
+    
     def inserir(self, posicao, dado):
         novo = _No(dado)
         self.__tamanho += 1
@@ -95,6 +107,8 @@ lista.inserir_final(6)
 lista.imprimir()
 lista.inserir_final(251234)
 lista.imprimir()
+print("--------------")
+print(lista.posicao(10))
 print("--------------")
 
 print(lista.tamanho())
