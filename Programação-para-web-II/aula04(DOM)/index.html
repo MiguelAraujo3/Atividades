@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Document Object Model</h1>
+    <h2>Cursos do IFPB</h2>
+    <p>Bacharelado em ES</p>
+    <p>Tecnologia em SI</p>
+    <p class="tgeo">Tecnologia em Geoprocessamento</p>
+    <p id="tred">Tecnologia em Redes</p>
+    <div>
+        <form action="">
+            <input type="password" name="curso" placeholder="Qual o seu curso? ">
+            <!--
+            <div style="margin-top: 5px;">
+                <button id="btnDesvendar" type="submit">Desvendar Curso</button>
+            </div>
+        -->
+            <div style="margin-top: 5px;">
+                <button id="btnDesvendar" type="button" onclick="desvendarCurso()">Desvendar Curso</button>
+            </div>
+            
+        </form>
+        <p id="resposta"></p>
+    </div>
+    <script src="./main.js"></script>
+</body>
+</html>
