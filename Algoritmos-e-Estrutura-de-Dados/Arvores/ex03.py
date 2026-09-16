@@ -35,17 +35,20 @@ class Arvore:
         print(self.raiz, end=' ')
         for filho in self.filhos:
             filho.percorrer()
+    def quantidade(self):
+        if self.vazia():
+            return 0
+        total = 1;
+        for filho in self.filhos:
+            total += filho.quantidade()
+        return total
 
-# arvore = Arvore()
-# arvore.adicionar_raiz('A')
-# arvore.adicionar_filho('A','B')
-# arvore.adicionar_filho('A','C')
-# arvore.adicionar_filho('A','D')
-# arvore.imprimir()
-# arvore.adicionar_filho('B','E')
-# arvore.adicionar_filho('B','F')
-# arvore.adicionar_filho('D','G')
-# arvore.adicionar_filho('D','H')
-# arvore.adicionar_filho('D','I')
-# arvore.imprimir()
-# arvore.percorrer()
+arvore = Arvore()
+arvore.adicionar_raiz('A')
+arvore.adicionar_filho('A','B')
+arvore.adicionar_filho('A','C')
+arvore.adicionar_filho('A','D')
+arvore.adicionar_filho('C','E')
+arvore.adicionar_filho('C','F')
+arvore.adicionar_filho('F','G')
+print(f'Quantidade total de elemntos:  {arvore.quantidade()}')
