@@ -1,6 +1,6 @@
 //Formas de se criar objetos e métodos
 const stutent = {
-  matriucla: 12312312312,
+  matricula: 12312312312,
   name: "Nome Lindo",
   email: "nomelindo@ifpb.com",
   active: false,
@@ -15,8 +15,29 @@ const stutent = {
     return `${this.name} está Inativo`
   }
 }
+const arrayLike = {
+  0: 'teste',
+  1: 'novo',
+  length: 2
+}
 const server = new Object();
 server.ip = "192.168.0.1";
 server.port = 8080;
-
+console.log(stutent.matricula)
 console.log(stutent.situation())
+console.log(typeof[..."teste"]) 
+//console.log([...arrayLike]) ERRO, não é "interagível"
+
+const config = {
+  thema: "dark",
+  fontSize: 12,
+  showConfig(){
+      console.log(`Tema: ${this.thema}`)
+      console.log(`Tamanho da fonte: ${this.fontSize}`)
+    }
+}
+
+console.log(Object.entries(config))
+console.log(Object.values(config))
+console.log(Object.keys(config))
+config.showConfig()
