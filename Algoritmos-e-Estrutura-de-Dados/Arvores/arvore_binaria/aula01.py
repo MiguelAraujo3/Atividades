@@ -20,10 +20,12 @@ class Arvore:
                 self.esq.adicionar_raiz(dado)
                 return True
             return False
-        if self.esq is not None and self.esq.adicionar_esq(pai, dado):
-            return True
-        if self.dir.adicionar_esq(pai, dado) and self.dir is not None:
-            return True
+        if self.esq is not None:
+            if self.esq.adicionar_esq(pai, dado):
+                return True
+        if self.dir is not None:
+            if self.dir.adicionar_esq(pai, dado):
+                return True
         return False
     
     def adicionar_dir(self, pai, dado):
@@ -35,10 +37,12 @@ class Arvore:
                 self.dir.adicionar_raiz(dado)
                 return True
             return False
-        if self.esq is not None and self.esq.adicionar_dir(pai, dado):
-            return True
-        if self.dir is not None and self.dir.adicionar_dir(pai, dado):
-            return True
+        if self.esq is not None:
+            if self.esq.adicionar_dir(pai, dado):
+                return True
+        if self.dir is not None:
+            if self.dir.adicionar_dir(pai, dado):
+                return True
         return False 
     
     def imprimir(self, nivel=0):
@@ -48,12 +52,48 @@ class Arvore:
         print(" -" * nivel + str(self.raiz))
         if self.esq is not None:
             self.esq.imprimir(nivel+1)
-        elif  self.dir is not None:                    
+        elif self.dir is not None:                    
             print(' -'*(nivel+1) + '*')
         if  self.dir is not None:
             self.dir.imprimir(nivel+1)
         elif self.esq is not None:
             print(' -'*(nivel+1) + '*')
+    def pre_ordem(self):
+        if self.vazia():
+            return 
+        print(self.raiz, end=' ')
+        if self.esq is not None:
+            self.esq.pre_ordem()
+        if self.dir is not None:
+            self.dir.pre_ordem()
+    def em_ordem(self):
+        if self.vazia():
+            return
+        if self.esq is not None:
+            self.esq.em_ordem()
+        print(self.raiz, end=' ')
+        if self.dir is not None:
+            self.dir.em_ordem()
+    def pos_ordem(self):
+        if self.vazia():
+            return 
+        if self.esq is not None:
+            self.esq.pos_ordem()
+        if self.dir is not None:
+            self.dir.pos_ordem()
+        print(self.raiz, end=' ')
+
+    def em_nivel(self):
+        if self.vazia():
+            return
+        fila = [self]
+        while fila:
+            arvore = fila.pop(0)
+            print(arvore.raiz,end=' ')
+            if arvore.esq is not None:
+                fila.append(arvore.esq)
+            if arvore.dir is not None:
+                fila.append(arvore.dir)
 
 a = Arvore()
 a.adicionar_raiz('A')
