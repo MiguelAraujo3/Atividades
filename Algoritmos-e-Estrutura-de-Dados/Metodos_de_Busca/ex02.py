@@ -6,7 +6,10 @@ def busca_binaria(lista, valor):
         if lista[meio] == valor:
             resultado = meio
             while lista[resultado-1] == valor:
-                resultado -= 1
+                resultado -=1
+            return resultado
+            #while lista[resultado-1] == valor:
+            #    resultado -= 1
 #se o valor que eu quero, é maior que o que está no meio então ele está para o "fim" da lista
         if valor > lista[meio]:
 #então o inicio deve ser o primeiro indice depois do meio
@@ -17,6 +20,6 @@ def busca_binaria(lista, valor):
             fim = meio - 1
         
     return None
-dados = [2, 5, 5, 5, 8, 11]
+dados = [2, 5, 5, 5, 5, 8, 11]
 print(busca_binaria(dados, 5)) # 1
 print(busca_binaria(dados, 7)) # None
